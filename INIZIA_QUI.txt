@@ -1,0 +1,73 @@
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║   🎮  TETRIS COOPERATIVO - INIZIA DA QUI!  🎮                ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+
+
+📋 HAI 2 OPZIONI:
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  OPZIONE 1: AUTOMATICO (Consigliato!)                      │
+│                                                             │
+│  Esegui questo comando:                                     │
+│                                                             │
+│    ./TEST_FACILE.sh                                         │
+│                                                             │
+│  Lo script fa quasi tutto da solo!                          │
+│  Ti guida passo-passo.                                      │
+└─────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  OPZIONE 2: MANUALE (Passo-passo)                          │
+│                                                             │
+│  Leggi questa guida:                                        │
+│                                                             │
+│    cat COME_TESTARE_SEMPLICE.md                             │
+│                                                             │
+│  Spiega tutto nei dettagli, semplice!                       │
+└─────────────────────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────┐
+│  OPZIONE 3: VELOCE (Solo per esperti)                      │
+│                                                             │
+│  Terminale 1:                                               │
+│    cd backend                                               │
+│    npm install                                              │
+│    npm run dev                                              │
+│                                                             │
+│  Terminale 2:                                               │
+│    cd frontend                                              │
+│    npm install                                              │
+│    npx expo start                                           │
+│                                                             │
+│  Poi scansiona il QR code col telefono (usa Expo Go)        │
+└─────────────────────────────────────────────────────────────┘
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🆘 PRIMA DI INIZIARE, HAI BISOGNO DI:
+
+  ✓ Node.js installato (node --version)
+  ✓ PostgreSQL installato (psql --version)
+  ✓ Redis installato (redis-cli --version)
+  ✓ Uno smartphone (iPhone o Android)
+  ✓ App "Expo Go" installata sul telefono
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+💡 CONSIGLIO:
+
+Inizia con OPZIONE 1 (./TEST_FACILE.sh)
+
+Ti fa tutto automaticamente!
+
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Buona fortuna! 🍀

@@ -1,0 +1,66 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    container_name: tetris-postgres
+    environment:
+      POSTGRES_USER: tetris
+      POSTGRES_PASSWORD: tetris_dev_password
+      POSTGRES_DB: tetris_coop
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/migrations:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tetris"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: tetris-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Backend service (commented for now, will add after backend setup)
+  # backend:
+  #   build:
+  #     context: ./backend
+  #     dockerfile: Dockerfile
+  #   container_name: tetris-backend
+  #   depends_on:
+  #     postgres:
+  #       condition: service_healthy
+  #     redis:
+  #       condition: service_healthy
+  #   environment:
+  #     NODE_ENV: development
+  #     DATABASE_URL: postgresql://tetris:tetris_dev_password@postgres:5432/tetris_coop
+  #     REDIS_URL: redis://redis:6379
+  #     JWT_SECRET: dev_jwt_secret_change_in_production
+  #     PORT: 3000
+  #   ports:
+  #     - "3000:3000"
+  #   volumes:
+  #     - ./backend:/app
+  #     - /app/node_modules
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  default:
+    name: tetris-network

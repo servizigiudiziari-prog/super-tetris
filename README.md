@@ -1,6 +1,6 @@
 # Tetris Cooperativo Asincrono (TCA)
 
-> **Status**: Backend MVP ✅ Complete | Frontend MVP ✅ Complete | Controls 🚧 In Progress
+> **Status**: Backend MVP ✅ Complete | Frontend MVP ✅ Complete | Touch Controls ✅ Complete
 
 Puzzle game innovativo dove 4 giocatori collaborano su una griglia Tetris condivisa, giocando in momenti diversi.
 
@@ -13,6 +13,15 @@ Puzzle game innovativo dove 4 giocatori collaborano su una griglia Tetris condiv
 - **Cooperazione**: Ogni pezzo posizionato persiste e gli altri devono adattarsi
 
 ## 🚀 Quick Start
+
+> **🧪 Guida Completa al Testing**: Per istruzioni dettagliate in italiano su come testare l'applicazione (backend API e app mobile), vedi [GUIDA_TEST.md](./GUIDA_TEST.md)
+
+### Setup Automatico
+
+```bash
+# Installa tutte le dipendenze e configura il progetto
+./setup.sh
+```
 
 ### Prerequisites
 

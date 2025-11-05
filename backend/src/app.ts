@@ -5,6 +5,8 @@ import config from './config/env';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler';
 import { apiLimiter } from './middleware/rateLimiter';
 import healthRouter from './routes/health';
+import authRouter from './routes/auth';
+import gamesRouter from './routes/games';
 import logger from './utils/logger';
 
 const app: Application = express();
@@ -35,10 +37,10 @@ app.use('/api', apiLimiter);
 
 // Routes
 app.use('/api', healthRouter);
+app.use('/api/auth', authRouter);
+app.use('/api/games', gamesRouter);
 
 // TODO: Add more routes
-// app.use('/api/auth', authRouter);
-// app.use('/api/games', gameRouter);
 // app.use('/api/notifications', notificationRouter);
 // app.use('/api/analytics', analyticsRouter);
 
